@@ -15,5 +15,11 @@
 /* 	A string must ALWAYS end with a ’\0’ 
 	It is forbidden to use global variables.
 	If you need sub-functions to write a complex function, you must define these sub- functions as static as stipulated in the Norm.
-	
+
 */
+
+int main(void)
+{
+	
+	return 0;
+}

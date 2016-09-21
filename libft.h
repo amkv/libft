@@ -12,14 +12,16 @@
 
 /* MACROS and typedef */
 
-#ifndef LIBFT.H
+#ifndef LIBFT_H
 
-# define LIBFT.H
-#include string.h
+# define LIBFT_H
+# include <string.h>
 
 /* list of functions */
 /* ft_memset */
+void	*ft_memset(void *b, int c, size_t len);
 /* ft_bzero */
+void	ft_bzero(void *s, size_t n);
 /* ft_memcpy */
 /* ft_memccpy */
 /* ft_memmove */
@@ -64,11 +66,12 @@ char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
-void	
-
-
-
-
+void	ft_putendl(char const *s);
+void	ft_putnbr(int n);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putendl_fd(char const *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 /* NULL and size_t */
 /* allowed functions: 
