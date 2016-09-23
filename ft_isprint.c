@@ -19,7 +19,9 @@ int		main(void)
 	unsigned char ch;
 
 	//ch = 'Δ';
-	ch = 'a';
+	//ch = 'a';
+	ch = 0133;
+	printf("char:    %5c\n", ch);
 	printf("Original:%5d\n", isprint(ch));
 	printf("Function:%5d\n", ft_isprint(ch));
 	return (0);
@@ -27,10 +29,8 @@ int		main(void)
 
 int		ft_isprint(int c)
 {
-	int	result;
-
-	result = c;
-	if (result >= 32 && result < 127)
+	if (c >= 32 && c < 127)
 		return (1);
-	return (0);
+	else
+		return (0);
 }

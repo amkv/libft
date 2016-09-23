@@ -28,11 +28,8 @@ int					main(void)
 
 int					ft_tolower(int c)
 {
-	int				number;
-
-	number = c;
-	if (number >= 65 && number <= 90)
-		return (number + 32);
+	if (c >= 65 && c <= 90)
+		return (c + 32);
 	else
-		return (number);
+		return (c);
 }

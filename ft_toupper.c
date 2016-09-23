@@ -28,11 +28,8 @@ int					main(void)
 
 int					ft_toupper(int c)
 {
-	int				number;
-
-	number = c;
-	if (number >= 97 && number <= 122)
-		return (number - 32);
+	if (c >= 97 && c <= 122)
+		return (c - 32);
 	else
-		return (number);
+		return (c);
 }

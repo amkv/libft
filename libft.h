@@ -53,14 +53,15 @@ char *ft_strcpy(char *dst, const char *src); // NOT OK
 /* ft_isalpha */
 /* ft_isdigit */
 /* ft_isalnum */
-/* ft_isascii */
 
+/* ft_isascii */
+int		ft_isascii(int c); // OK
 /* ft_isprint */
 int		ft_isprint(int c); // OK
 /* ft_toupper */
-int		ft_toupper(int c); // OK
+int		ft_toupper(int c); // проверить на STRING 
 /* ft_tolower */
-int		ft_tolower(int c); // OK
+int		ft_tolower(int c); // проверить на STRING
 
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
