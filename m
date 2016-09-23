@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 NAME=ftest
-FUNCTION="ft_$1.c"
+FUNCTION=$1
 gcc -Wall -Wextra -Werror $FUNCTION -o $NAME
 if [ -a "$NAME" ]
 	then

@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akalmyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/23 10:36:22 by akalmyko          #+#    #+#             */
-/*   Updated: 2016/09/23 10:36:27 by akalmyko         ###   ########.fr       */
+/*   Created: 2016/09/23 10:42:02 by akalmyko          #+#    #+#             */
+/*   Updated: 2016/09/23 10:42:03 by akalmyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <ctype.h> // tolower
+#include <stdio.h> // printf
+#include <ctype.h> // isprint
 
-int					main(void)
+int		main(void)
 {
-	unsigned char	number;
-	int				result;
+	unsigned char ch;
 
-	number = 'A';
-	result = tolower(number);
-	printf("Original:%5d\n", result);
-	result = ft_tolower(number);
-	printf("Function:%5d\n", result);
+	//ch = 'Δ';
+	ch = 'a';
+	printf("Original:%5d\n", isprint(ch));
+	printf("Function:%5d\n", ft_isprint(ch));
 	return (0);
 }
 
-int					ft_tolower(int c)
+int		ft_isprint(int c)
 {
-	int				number;
+	int	result;
 
-	number = c;
-	if (number >= 65 && number <= 90)
-		return (number + 32);
-	else
-		return (number);
+	result = c;
+	if (result >= 32 && result < 127)
+		return (1);
+	return (0);
 }

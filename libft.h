@@ -15,13 +15,16 @@
 #ifndef LIBFT_H
 
 # define LIBFT_H
-# include <string.h>
+# include <string.h> // NULL, size_t
+# include <stdlib.h> // malloc, free
+# include <unistd.h> // write
 
 /* list of functions */
+
 /* ft_memset */
-void	*ft_memset(void *b, int c, size_t len);
+//void	*ft_memset(void *b, int c, size_t len);
 /* ft_bzero */
-void	ft_bzero(void *s, size_t n);
+//void	ft_bzero(void *s, size_t n);
 /* ft_memcpy */
 /* ft_memccpy */
 /* ft_memmove */
@@ -51,10 +54,11 @@ char *ft_strcpy(char *dst, const char *src); // NOT OK
 /* ft_isdigit */
 /* ft_isalnum */
 /* ft_isascii */
+
 /* ft_isprint */
+int		ft_isprint(int c); // OK
 /* ft_toupper */
 int		ft_toupper(int c); // OK
-
 /* ft_tolower */
 int		ft_tolower(int c); // OK
 
@@ -82,11 +86,5 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-
-/* NULL and size_t */
-/* allowed functions: 
-	malloc(3)
-	free(3)
-	write(2) */
 
 #endif

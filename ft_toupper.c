@@ -13,22 +13,22 @@
 #include "libft.h"
 #include <ctype.h> //toupper
 
-int			main(void)
+int					main(void)
 {
 	unsigned char	number;
-	int		result;
-	
+	int				result;
+
 	number = '!';
 	result = toupper(number);
-	printf("Original:    %5d\n", result);
+	printf("Original:%5d\n", result);
 	result = ft_toupper(number);
-	printf("Modificated: %5d\n", result);
-	return 0;
+	printf("Function:%5d\n", result);
+	return (0);
 }
 
-int			ft_toupper(int c)
+int					ft_toupper(int c)
 {
-	int		number;
+	int				number;
 
 	number = c;
 	if (number >= 97 && number <= 122)
