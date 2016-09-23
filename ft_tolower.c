@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akalmyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/21 12:13:09 by akalmyko          #+#    #+#             */
-/*   Updated: 2016/09/21 12:13:11 by akalmyko         ###   ########.fr       */
+/*   Created: 2016/09/23 10:36:22 by akalmyko          #+#    #+#             */
+/*   Updated: 2016/09/23 10:36:27 by akalmyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h> // DELETE
+#include <ctype.h> // tolower
 
-/* 	A string must ALWAYS end with a ’\0’ 
-	It is forbidden to use global variables.
-	If you need sub-functions to write a complex function, you must define these sub- functions as static as stipulated in the Norm.
-
-*/
-
-int main(void)
+int			main(void)
 {
-	printf("TEST\n");
-	return 0;
+	unsigned char	number;
+	int		result;
+	
+	number = 'A';
+	result = tolower(number);
+	printf("Original:    %5d\n", result);
+	result = ft_tolower(number);
+	printf("Modificated: %5d\n", result);
+	return (0);
+}
+
+int			ft_tolower(int c)
+{
+	int		number;
+
+	number = c;
+	if (number >= 65 && number <= 90)
+		return (number + 32);
+	else
+		return (number);
 }

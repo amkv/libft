@@ -27,9 +27,16 @@ void	ft_bzero(void *s, size_t n);
 /* ft_memmove */
 /* ft_memchr */
 /* ft_memcmp */
+
 /* ft_strlen */
+size_t ft_strlen(const char *s); // OK
+
 /* ft_strdup */
+char *ft_strdup(const char *s1);
+
 /* ft_strcpy */
+char *ft_strcpy(char *dst, const char *src); // NOT OK
+
 /* ft_strncpy */
 /* ft_strcat */
 /* ft_strlcat */
@@ -46,7 +53,10 @@ void	ft_bzero(void *s, size_t n);
 /* ft_isascii */
 /* ft_isprint */
 /* ft_toupper */
+int		ft_toupper(int c); // OK
+
 /* ft_tolower */
+int		ft_tolower(int c); // OK
 
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);

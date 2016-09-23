@@ -12,21 +12,25 @@
 
 # Nabrosok
 
-
-NAME = libft.a
-FLAGS = -Wall -Wextra -Werror
-
-
+#NAME = libft.a
+NAME = test
+FLAGS = -Wall -Wextra -Werror 
+CFILES = main.c
+OFILES = $(CFILES:.c=.o)
+CC = gcc
 
 all: $(NAME)
 
 $(NAME):
 	clear
+	@$(CC) $(FLAGS) $(CFILES) -o $(NAME)
+	@echo "Compiled: $(NAME)"
+	@./test
 
 clean:
-	/bin/rm -f $(OFILES)
+	/bin/rm -rf $(OFILES)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	/bin/rm -rf $(NAME)
 
 re: fclean all
