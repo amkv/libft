@@ -48,8 +48,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 /* ft_strchr */
 char	*ft_strchr(const char *s, int c); // OK
-
 /* ft_strrchr */
+char	*ft_strrchr(const char *s, int c);
+
 /* ft_strstr */
 /* ft_strnstr */
 
