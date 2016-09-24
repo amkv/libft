@@ -32,7 +32,7 @@
 /* ft_memcmp */
 
 /* ft_strlen */
-size_t ft_strlen(const char *s); // OK
+size_t ft_strlen(const char *s); // NULL проверить // OK
 
 /* ft_strdup */
 char *ft_strdup(const char *s1);
@@ -47,13 +47,21 @@ char *ft_strcpy(char *dst, const char *src); // NOT OK
 /* ft_strrchr */
 /* ft_strstr */
 /* ft_strnstr */
-/* ft_strcmp */
-/* ft_strncmp */
-/* ft_atoi */
-/* ft_isalpha */
-/* ft_isdigit */
-/* ft_isalnum */
 
+/* ft_strcmp */
+int		ft_strcmp(const char *s1, const char *s2); // OK
+
+/* ft_strncmp */
+
+
+/* ft_atoi */
+
+/* ft_isalpha */
+int		ft_isalpha(int c); // OK
+/* ft_isdigit */
+int		ft_isdigit(int c); // OK
+/* ft_isalnum */
+int		ft_isalnum(int c); // OK
 /* ft_isascii */
 int		ft_isascii(int c); // OK
 /* ft_isprint */
