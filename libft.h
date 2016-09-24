@@ -41,8 +41,10 @@ char	*ft_strcpy(char *dst, const char *src); // NOT OK
 char	*ft_strncpy(char *dst, const char *src, size_t len); // NOT OK
 
 /* ft_strcat */
-char	*ft_strcat(char *restrict s1, const char *restrict s2);
+char	*ft_strcat(char *s1, const char *s2); // OK
 /* ft_strlcat */
+
+
 /* ft_strchr */
 /* ft_strrchr */
 /* ft_strstr */
