@@ -50,9 +50,8 @@ char *ft_strcpy(char *dst, const char *src); // NOT OK
 
 /* ft_strcmp */
 int		ft_strcmp(const char *s1, const char *s2); // OK
-
 /* ft_strncmp */
-
+int		ft_strncmp(const char*s1, const char *s2, size_t n); // OK
 
 /* ft_atoi */
 
