@@ -32,16 +32,16 @@
 /* ft_memcmp */
 
 /* ft_strlen */
-size_t ft_strlen(const char *s); // NULL проверить // OK
-
+size_t	ft_strlen(const char *s); // NULL проверить // OK
 /* ft_strdup */
-char *ft_strdup(const char *s1);
-
+char	*ft_strdup(const char *s1); // OK
 /* ft_strcpy */
-char *ft_strcpy(char *dst, const char *src); // NOT OK
-
+char	*ft_strcpy(char *dst, const char *src); // NOT OK
 /* ft_strncpy */
+char	*ft_strncpy(char *dst, const char *src, size_t len); // NOT OK
+
 /* ft_strcat */
+char	*ft_strcat(char *restrict s1, const char *restrict s2);
 /* ft_strlcat */
 /* ft_strchr */
 /* ft_strrchr */
