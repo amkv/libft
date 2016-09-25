@@ -42,16 +42,16 @@ char	*ft_strncpy(char *dst, const char *src, size_t len); // NOT OK
 
 /* ft_strcat */
 char	*ft_strcat(char *s1, const char *s2); // OK
-
 /* ft_strlcat */
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 /* ft_strchr */
 char	*ft_strchr(const char *s, int c); // OK
 /* ft_strrchr */
-char	*ft_strrchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c); // OK
 
 /* ft_strstr */
+char	*ft_strstr(const char *big, const char *little); // OK но необходимо разобраться до конца
 /* ft_strnstr */
 
 /* ft_strcmp */
@@ -100,5 +100,43 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+
+// 1.
+// //strlen
+// //isalpha
+// //isdigit
+// //isalnum
+// //isascii
+// //isprint
+
+// 2.
+// //toupper
+// //tolower
+// //memchr
+// //strchr
+// //strrchr
+// //bzero
+
+// 3.
+// memcpy
+// strcpy
+// strcat
+// strcmp
+// strstr
+// memmove
+// memcmp
+
+// 4.
+// strlcat
+// strdup
+// atoi
+// memccpy
+// strnstr
+// strncmp
+// strncpy
+// strncat
+
+// //memset
 
 #endif
