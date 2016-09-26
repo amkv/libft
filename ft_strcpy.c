@@ -11,22 +11,10 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	main(void)
+char				*ft_strcpy(char *dst, const char *src)
 {
-	char *src;
-	char dst[0];
-
-	src = "test";
-	ft_strcpy(dst, src);
-	printf("%s\n", dst);
-	return (0);
-}
-
-char *ft_strcpy(char *dst, const char *src)
-{
-	unsigned int i;
+	unsigned int	i;
 
 	i = 0;
 	while (src[i] != '\0')

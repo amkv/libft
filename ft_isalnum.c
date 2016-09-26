@@ -11,19 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h> // printf
-#include <ctype.h> // isalnum
-
-int		main(void)
-{
-	unsigned char ch;
-
-	ch = '!';
-	printf("Character:%4c\n", ch);
-	printf("Original:%5d\n", isalnum(ch));
-	printf("Function:%5d\n", ft_isalnum(ch));
-	return (0);
-}
 
 int		ft_isalnum(int c)
 {

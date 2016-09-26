@@ -11,20 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <ctype.h> //toupper
-
-int					main(void)
-{
-	unsigned char	number;
-	int				result;
-
-	number = '!';
-	result = toupper(number);
-	printf("Original:%5d\n", result);
-	result = ft_toupper(number);
-	printf("Function:%5d\n", result);
-	return (0);
-}
 
 int					ft_toupper(int c)
 {

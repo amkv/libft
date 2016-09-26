@@ -11,21 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h> // printf
-#include <ctype.h> // isprint
-
-int		main(void)
-{
-	unsigned char ch;
-
-	//ch = 'Δ';
-	//ch = 'a';
-	ch = 0133;
-	printf("char:    %5c\n", ch);
-	printf("Original:%5d\n", isprint(ch));
-	printf("Function:%5d\n", ft_isprint(ch));
-	return (0);
-}
 
 int		ft_isprint(int c)
 {

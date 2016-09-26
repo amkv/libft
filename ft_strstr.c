@@ -11,23 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
-
-int COUNTER = 0;
-// printf("STEP: %d\n", ++COUNTER);
-
-int		main(void)
-{
-	char	*str1;
-	char	*str2;
-
-	str1 = "my test string";
-	str2 = "test";
-	printf("original f: %s\n", strstr(str1, str2));
-	printf("function:   %s\n", ft_strstr(str1, str2));
-	return (0);
-}
 
 char	*ft_strstr(const char *big, const char *little)
 {

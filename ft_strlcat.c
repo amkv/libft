@@ -11,18 +11,11 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
-
-int		main(void)
-{
-	return (0);
-}
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t		size;
 	size = 0;
-
-	return (size)
+	dst = NULL;
+	src = NULL;
+	return (size);
 }

@@ -11,19 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h> // printf
-#include <ctype.h> // isascii
-
-int		main(void)
-{
-	unsigned char ch;
-
-	ch = 0200;
-	printf("char:    %5c\n", ch);
-	printf("Original:%5d\n", isascii(ch));
-	printf("Function:%5d\n", ft_isascii(ch));
-	return (0);
-}
 
 int		ft_isascii(int c)
 {

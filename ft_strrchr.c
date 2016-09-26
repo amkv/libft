@@ -11,26 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
-
-int		main(void)
-{
-	char *str;
-	int	num;
-
-	str = "test f4ile!";
-	// num = 't';
-	num = 'e';
-	// num = ' ';
-	// num = 'f';
-	// num = '\0';
-	// num = 'd';
-	//num = 4;
-	printf("%s\n", strrchr(str, num));
-	printf("%s\n", ft_strrchr(str, num));
-	return (0);
-}
 
 char	*ft_strrchr(const char *s, int c)
 {

@@ -11,24 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h> // printf
-#include <string.h> // strcmp
-
-int		main(void)
-{
-	char	*str1;
-	char	*str2;
-	int		st1;
-	int		st2;
-
-	str1 = " ";
-	str2 = "b";
-	st1 = strcmp(str1, str2);
-	st2 = ft_strcmp(str1, str2);
-	printf("Original:%5d\n", st1);
-	printf("Function:%5d\n", st2);
-	return (0);
-}
 
 int		ft_strcmp(const char *s1, const char *s2)
 {

@@ -11,19 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h> // printf
-#include <ctype.h> // isdigit
-
-int		main(void)
-{
-	unsigned char ch;
-
-	ch = 49;
-	printf("Character:%4c\n", ch);
-	printf("Original:%5d\n", isdigit(ch));
-	printf("Function:%5d\n", ft_isdigit(ch));
-	return (0);
-}
 
 int		ft_isdigit(int c)
 {

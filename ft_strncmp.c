@@ -11,26 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h> // strncmp
-#include <stdio.h> // printf
-
-int		main(void)
-{
-	size_t	number;
-	char	*str1;
-	char	*str2;
-	int		st1;
-	int		st2;
-
-	str1 = "tesd";
-	str2 = "test";
-	number = 2;
-	st1 = strncmp(str1, str2, number);
-	st2 = ft_strncmp(str1, str2, number);
-	printf("Original:%5d\n", st1);
-	printf("Function:%5d\n", st2);
-	return (0);
-}
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {

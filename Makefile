@@ -12,10 +12,10 @@
 
 # Nabrosok
 
-#NAME = libft.a
-NAME = test
-FLAGS = -Wall -Wextra -Werror 
-CFILES = main.c
+NAME = libft.a
+# NAME = test
+FLAGS = -Wall -Wextra -Werror -c
+CFILES = *.c
 OFILES = $(CFILES:.c=.o)
 CC = gcc
 
@@ -23,9 +23,13 @@ all: $(NAME)
 
 $(NAME):
 	clear
-	@$(CC) $(FLAGS) $(CFILES) -o $(NAME)
-	@echo "Compiled: $(NAME)"
-	@./test
+	@#$(CC) $(FLAGS) $(CFILES) $(NAME)
+	@#echo "Compiled: $(NAME)"
+	@#./test
+
+	$(CC) $(FLAGS) $(CFILES)
+	ar rc $(NAME) $(OFILES)
+	ranlib $(NAME)
 
 clean:
 	/bin/rm -rf $(OFILES)
