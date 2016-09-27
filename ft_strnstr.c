@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akalmyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/24 16:42:30 by akalmyko          #+#    #+#             */
-/*   Updated: 2016/09/24 16:42:31 by akalmyko         ###   ########.fr       */
+/*   Created: 2016/09/26 16:51:38 by akalmyko          #+#    #+#             */
+/*   Updated: 2016/09/26 16:51:41 by akalmyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *big, const char *little)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	char const	*bigbox;
 	char const	*littlebox;
@@ -21,10 +21,11 @@ char	*ft_strstr(const char *big, const char *little)
 	while (*big != '\0')
 	{
 		bigbox = big;
-		while (*little != '\0' && *big == *little)
+		while (*little != '\0' && *big == *little && len > 0)
 		{
 			++big;
 			++little;
+			--len;
 		}
 		if (*little == '\0')
 			return ((char *)bigbox);
