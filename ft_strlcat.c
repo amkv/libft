@@ -11,41 +11,42 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h> //
 
-// int		main(void)
-// {
-// 	char	*dst;
-// 	char	*src;
-// 	size_t	size;
-// 	char	*dst2;
-// 	char	*src2;
+/*
+#include <stdio.h> //
 
-	
-// 	dst = NULL;
-// 	src = NULL;
-// 	dst2 = NULL;
-// 	src2 = NULL;
-// 	size = 10;
-// 	src = (char*)malloc(sizeof(dst)*30);
-// 	dst = (char*)malloc(sizeof(dst)*30);
-// 	src2 = (char*)malloc(sizeof(dst)*30);
-// 	dst2 = (char*)malloc(sizeof(dst)*30);
-// 	src = "test";
-// 	src2 = "test";
-// 	dst[0] = '1';
-// 	dst2[0] = '1';
-// 	printf("original: %lu\n", strlcat(dst, src, size));
-// 	printf("original: %s\n", src);
-// 	printf("original: %s\n", dst);
-// 	printf("function: %lu\n", ft_strlcat(dst2, src2, size));
-// 	printf("function: %s\n", src2);
-// 	printf("function: %s\n", dst2);
-// 	return (0);
-// }
+int		main(void)
+{
+	char	*dst;
+	char	*src;
+	size_t	size;
+	char	*dst2;
+	char	*src2;
 
+	dst = NULL;
+	src = NULL;
+	dst2 = NULL;
+	src2 = NULL;
+	size = 10;
+	src = (char*)malloc(sizeof(dst)*30);
+	dst = (char*)malloc(sizeof(dst)*30);
+	src2 = (char*)malloc(sizeof(dst)*30);
+	dst2 = (char*)malloc(sizeof(dst)*30);
+	src = "test";
+	src2 = "test";
+	dst[0] = '1';
+	dst2[0] = '1';
+	printf("original: %lu\n", strlcat(dst, src, size));
+	printf("original: %s\n", src);
+	printf("original: %s\n", dst);
+	printf("function: %lu\n", ft_strlcat(dst2, src2, size));
+	printf("function: %s\n", src2);
+	printf("function: %s\n", dst2);
+	return (0);
+}
+*/
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t		ft_strlcat(char *dst, const char *src, size_t size)
 {
 	char	*temp;
 	size_t	i;
