@@ -36,6 +36,9 @@ int		ft_tolower(int c);
 int		ft_atoi(const char *str);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
 void	ft_bzero(void *s, size_t n);
+void	*ft_memset(void *b, int c, size_t len);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+
 /* ADDONS */
 int		ft_isspace(int c);
 
@@ -49,10 +52,9 @@ int		ft_strcmp(const char *s1, const char *s2); // NOT OK
 /* ft_strncmp */
 int		ft_strncmp(const char*s1, const char *s2, size_t n); // NOT OK
 
-/* ft_memset */
-//void	*ft_memset(void *b, int c, size_t len);
-/* ft_memcpy */
 /* ft_memccpy */
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
+
 /* ft_memmove */
 /* ft_memchr */
 /* ft_memcmp */
