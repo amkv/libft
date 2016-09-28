@@ -10,36 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-int		ft_strcmp(const char *s1, const char *s2)
-{
-	int i;
-
-	i = 0;
-	while (s1[i] != '\0' || s2[i] != '\0')
-	{
-		if (s1[i] == s2[i])
-			i++;
-		else
-			return ((s1[i] - 48) - (s2[i] - 48));
-	}
-	return (0);
-}
-*/
-
 #include "libft.h"
 
 int		ft_strcmp(const char *s1, const char *s2)
 {
-	while (*s1 != '\0' || *s2 != '\0')
+	const unsigned char *s1ptr;
+	const unsigned char *s2ptr;
+
+	s1ptr = (unsigned char*)s1;
+	s2ptr = (unsigned char*)s2;
+	while (*s1ptr != '\0' || *s2ptr != '\0')
 	{
-		if (*s1 == *s2)
+		if (*s1ptr == *s2ptr)
 		{
-			s1++;
-			s2++;
+			s1ptr++;
+			s2ptr++;
 		}
 		else
-			return ((*s1 - 48) - (*s2 - 48));
+			return (*s1ptr - *s2ptr);
 	}
 	return (0);
 }
