@@ -39,6 +39,7 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
+void	*ft_memmove(void *dst, const void *src, size_t len); // доразобраться
 
 /* ADDONS */
 int		ft_isspace(int c);
@@ -53,10 +54,9 @@ int		ft_strcmp(const char *s1, const char *s2); // NOT OK
 /* ft_strncmp */
 int		ft_strncmp(const char*s1, const char *s2, size_t n); // NOT OK
 
-/* ft_memmove */
-void	*ft_memmove(void *dst, const void *src, size_t len);
-
 /* ft_memchr */
+void	*ft_memchr(const void *s, int c, size_t n);
+
 /* ft_memcmp */
 
 
@@ -109,7 +109,7 @@ memchr
 + strcat
 strcmp
 + strstr
-memmove
++ memmove
 memcmp
 
 4.
