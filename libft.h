@@ -33,27 +33,24 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+int		ft_atoi(const char *str);
+char	*ft_strncat(char *s1, const char *s2, size_t n);
+void	ft_bzero(void *s, size_t n);
 /* ADDONS */
 int		ft_isspace(int c);
 
 /* IN PROGRESS */
 /* ft_strlcat */
 size_t	ft_strlcat(char *dst, const char *src, size_t size); // NOT OK
-/* ft_strncat */
-char	*ft_strncat(char *s1, const char *s2, size_t n);
 /* ft_strnstr */
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 /* ft_strcmp */
 int		ft_strcmp(const char *s1, const char *s2); // NOT OK
 /* ft_strncmp */
 int		ft_strncmp(const char*s1, const char *s2, size_t n); // NOT OK
-/* ft_atoi */
-int		ft_atoi(const char *str);
 
 /* ft_memset */
 //void	*ft_memset(void *b, int c, size_t len);
-/* ft_bzero */
-//void	ft_bzero(void *s, size_t n);
 /* ft_memcpy */
 /* ft_memccpy */
 /* ft_memmove */
@@ -102,7 +99,7 @@ void	ft_putnbr_fd(int n, int fd);
 memchr
 + strchr
 + strrchr
-bzero
++ bzero
 
 3.
 memcpy
@@ -116,12 +113,12 @@ memcmp
 4.
 strlcat
 + strdup
-atoi
++ atoi
 memccpy
 strnstr
 strncmp
 + strncpy
-strncat
++ strncat
 
 memset
 */
