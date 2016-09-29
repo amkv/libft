@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akalmyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/29 13:59:53 by akalmyko          #+#    #+#             */
-/*   Updated: 2016/09/29 13:59:56 by akalmyko         ###   ########.fr       */
+/*   Created: 2016/09/29 14:14:59 by akalmyko          #+#    #+#             */
+/*   Updated: 2016/09/29 14:15:00 by akalmyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+// #include "libft.h"
 
 // int		main(void)
 // {
-// 	char	c;
-// 	int		fd;
+// 	int		n;
 
-// 	c = 'a';
-// 	fd = 1;
-// 	ft_putchar_fd(c, fd);
+// 	n = 10;
+// 	ft_putnbr(n);
 // 	return (0);
 // }
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putnbr(int n)
 {
-
-	write(fd, &c, 1);
+	n = 0;
 }

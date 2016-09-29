@@ -1,30 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akalmyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/29 13:59:53 by akalmyko          #+#    #+#             */
-/*   Updated: 2016/09/29 13:59:56 by akalmyko         ###   ########.fr       */
+/*   Created: 2016/09/29 14:21:08 by akalmyko          #+#    #+#             */
+/*   Updated: 2016/09/29 14:21:09 by akalmyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+// #include <stdio.h>
+
+/*
+Allocates (with malloc(3)) and returns a “fresh” memory area.
+The memory allocated is initialized to 0.
+If the alloca- tion fails, the function returns NULL.
+
+Return value:
+The allocated memory area.
+*/
 
 // int		main(void)
 // {
-// 	char	c;
-// 	int		fd;
+// 	char	*s;
 
-// 	c = 'a';
-// 	fd = 1;
-// 	ft_putchar_fd(c, fd);
+// 	s = NULL;
+// 	printf("%p\n", s);
+// 	s = ft_memalloc(10);
+// 	printf("s: %p\n", s);
 // 	return (0);
 // }
 
-void	ft_putchar_fd(char c, int fd)
+void	*ft_memalloc(size_t size)
 {
-
-	write(fd, &c, 1);
+	unsigned char	*ptr;
+	
+	if (!(ptr = malloc(size)))
+		return (NULL);
+	ft_bzero(ptr, size);
+	return (ptr);
 }

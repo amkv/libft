@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akalmyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/29 13:59:53 by akalmyko          #+#    #+#             */
-/*   Updated: 2016/09/29 13:59:56 by akalmyko         ###   ########.fr       */
+/*   Created: 2016/09/29 14:05:25 by akalmyko          #+#    #+#             */
+/*   Updated: 2016/09/29 14:05:27 by akalmyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,19 @@
 
 // int		main(void)
 // {
-// 	char	c;
+// 	char	*s;
 // 	int		fd;
 
-// 	c = 'a';
+// 	s = "test";
 // 	fd = 1;
-// 	ft_putchar_fd(c, fd);
+// 	ft_putstr_fd(s, fd);
 // 	return (0);
 // }
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putstr_fd(char const *s, int fd)
 {
-
-	write(fd, &c, 1);
+	if (!s)
+		return;
+	while (*s)
+		ft_putchar_fd(*s++, fd);
 }
