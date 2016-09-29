@@ -45,15 +45,17 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n); // доразобра�
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char*s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
+size_t	ft_strlcat(char *dst, const char *src, size_t size); // доразобраться
 
 /* ADDONS */
 int		ft_isspace(int c);
 
-/* IN PROGRESS */
-/* ft_strlcat */
-size_t	ft_strlcat(char *dst, const char *src, size_t size); // NOT OK
-
 /* Second part */
+void	ft_putchar(char c); // проверить на unicode
+void	ft_putstr(char const *s); // проверить на protected
+
+/* IN PROGRESS */
+
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
 char	*ft_strnew(size_t size);
@@ -70,8 +72,8 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
-void	ft_putchar(char c);
-void	ft_putstr(char const *s);
+
+
 void	ft_putendl(char const *s);
 void	ft_putnbr(int n);
 void	ft_putchar_fd(char c, int fd);
@@ -106,7 +108,7 @@ void	ft_putnbr_fd(int n, int fd);
 + memcmp
 
 4.
-strlcat
++ strlcat
 + strdup
 + atoi
 + memccpy
