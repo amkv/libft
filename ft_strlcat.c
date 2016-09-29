@@ -11,57 +11,86 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-/*
-#include <stdio.h> //
-
-int		main(void)
+int			main(void)
 {
 	char	*dst;
+	char	*dst2;
 	char	*src;
 	size_t	size;
-	char	*dst2;
-	char	*src2;
+	char	*temp;
 
-	dst = NULL;
-	src = NULL;
-	dst2 = NULL;
-	src2 = NULL;
-	size = 10;
-	src = (char*)malloc(sizeof(dst)*30);
-	dst = (char*)malloc(sizeof(dst)*30);
-	src2 = (char*)malloc(sizeof(dst)*30);
-	dst2 = (char*)malloc(sizeof(dst)*30);
-	src = "test";
-	src2 = "test";
-	dst[0] = '1';
-	dst2[0] = '1';
-	printf("original: %lu\n", strlcat(dst, src, size));
-	printf("original: %s\n", src);
-	printf("original: %s\n", dst);
-	printf("function: %lu\n", ft_strlcat(dst2, src2, size));
-	printf("function: %s\n", src2);
-	printf("function: %s\n", dst2);
+	dst = (char*)malloc(sizeof(char)*30);
+	dst2 = (char*)malloc(sizeof(char)*30);
+	src = "desk345345345";
+	size = 5;
+	temp = "help ";
+	ft_strcpy(dst, temp);
+	ft_strcpy(dst2, temp);
+	printf("dst: %s\n", dst);
+	printf("dst2: %s\n", dst2);
+	printf("-----------------------------\n");
+	printf("return: %zu\n", strlcat(dst, src, size));
+	printf("dst (strlcat): %s\n", dst);
+	printf("-----------------------------\n");
+	printf("return: %zu\n", ft_strlcat(dst2, src, size));
+	printf("dst2 (ft_strlcat): %s\n", dst2);
 	return (0);
+}
+
+// size_t		ft_strlcat(char *dst, const char *src, size_t size)
+// {
+// 	int				dstlen;
+// 	int				srclen;
+
+// 	dstlen = ft_strlen(dst);
+// 	srclen = ft_strlen(src);
+
+// 	while (*dst)
+// 		dst++;
+// 	while (size > 0)
+// 	{
+// 		*dst = *src;
+// 		dst++;
+// 		src++;
+// 		size--;
+// 	}
+// 	return (dstlen + srclen);
+// }
+
+/*
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
+{
+	size_t	dst_len;
+	size_t	ret;
+
+	dst_len = ft_strlen(dst);
+	ret = ft_strlen(src) + (size < dst_len ? size : dst_len);
+	dst += dst_len;
+	while ((++dst_len) < size && *src != '\0')
+		*dst++ = *src++;
+	*dst = '\0';
+	return (ret);
 }
 */
 
 size_t		ft_strlcat(char *dst, const char *src, size_t size)
 {
-	char	*temp;
-	size_t	i;
+	size_t dstl;
+	size_t srcl;
+	unsigned char	*dstptr;
+	unsigned char	*strptr;
 
-	i = 0;
-	temp = dst;
-	while (*dst != '\0')
-		dst++;
-	while (*src != '\0' && size > 0)
+	dstptr = (unsigned char*)dst;
+	strptr = (unsigned char*)src;
+	dstl = ft_strlen(dst);
+	srcl = ft_strlen(src);
+	while (size > 0)
 	{
-		*dst++ = *src++;
+		*dstptr = *dstptr + dstl;
+		*dstptr = *strptr;
 		size--;
 	}
-	*dst = '\0';
-	while (dst[i] != '\0')
-		i++;
-	return (i);
+	return (dstl + srcl);
 }

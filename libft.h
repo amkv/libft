@@ -100,18 +100,18 @@ void	ft_putnbr_fd(int n, int fd);
 + memcpy
 + strcpy
 + strcat
-strcmp
++ strcmp
 + strstr
 + memmove
-memcmp
++ memcmp
 
 4.
 strlcat
 + strdup
 + atoi
 + memccpy
-strnstr
-strncmp
++ strnstr
++ strncmp
 + strncpy
 + strncat
 
