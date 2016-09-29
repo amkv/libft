@@ -53,6 +53,7 @@ int		ft_isspace(int c);
 /* Second part */
 void	ft_putchar(char c); // проверить на unicode
 void	ft_putstr(char const *s); // проверить на protected
+void	ft_putchar_fd(char c, int fd); // проверить на unicode
 
 /* IN PROGRESS */
 
@@ -76,7 +77,7 @@ char	*ft_itoa(int n);
 
 void	ft_putendl(char const *s);
 void	ft_putnbr(int n);
-void	ft_putchar_fd(char c, int fd);
+
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
