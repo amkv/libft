@@ -10,18 +10,34 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
+// #include <stdio.h>
 
 // int		main(void)
 // {
 // 	int		n;
 
-// 	n = 10;
-// 	ft_putnbr(n);
+// 	n = -5;
+// 	while (n < 15)
+// 	{
+// 		ft_putnbr(n++);
+// 		ft_putchar('\n');
+// 	}
 // 	return (0);
 // }
 
 void	ft_putnbr(int n)
 {
-	n = 0;
+	unsigned int	nb;
+
+	nb = (n < 0 ? n * -1 : n);
+	if (n < 0)
+		ft_putchar('-');
+	if (nb > 9)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else
+		ft_putchar(nb + '0');
 }
