@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
+//#include <stdio.h>
 
 // int		main(void)
 // {
@@ -41,8 +41,13 @@ size_t		ft_ptrlen(char *beg, char *end)
 {
 	size_t		len;
 
-	len = 0;
-	while (*beg++ != *end)
-		len++;
-	return (len + 1);
+	if (beg && end)
+	{
+		len = 0;
+		while (beg++ != end)
+			len++;
+		return (len + 1);
+	}
+	else
+		return (1);
 }

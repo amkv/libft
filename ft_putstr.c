@@ -11,17 +11,17 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+// #include <stdio.h>
 
-int		main(void)
-{
-	char	*str;
+// int		main(void)
+// {
+// 	char	*str;
 
-	str = "test";
-	//ft_putstr(str);
-	printf("%s", "test");
-	return (0);
-}
+// 	str = "test";
+// 	//ft_putstr(str);
+// 	printf("%s", "test");
+// 	return (0);
+// }
 
 void	ft_putstr(char const *s)
 {

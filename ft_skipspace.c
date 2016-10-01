@@ -17,16 +17,25 @@
 // {
 // 	char	*s;
 
-// 	s = "   test";
+// 	s = "  \t \t \n   \n\n\n\t";
+// 	//printf("%s\n", s);
 // 	printf("%s\n", s);
-// 	printf("%s\n", ft_skipspace(s));
+// 	printf("ptr (str): %p\n", s);
+// 	printf("str + skip: %s\n", ft_skipspace(s));
+// 	printf("ptr (str + skip): %p\n", s);
+// 	printf("len: %zu\n", ft_ptrlen(s, s));
 // 	return (0);
 // }
 
 char	*ft_skipspace(char *s)
 {
+	unsigned int	len;
+
 	if (s)
 	{
+		len = ft_strlen(s);
+		if (len == 0)
+			return (s);
 		while (*s != '\0' && (*s == ' ' || *s == '\n' || *s == '\t'))
 			s++;
 		return (s);

@@ -13,6 +13,7 @@
 # Nabrosok
 
 NAME = libft.a
+NAME2 = test.a
 # NAME = test
 FLAGS = -Wall -Wextra -Werror -c
 CFILES = *.c

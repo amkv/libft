@@ -15,17 +15,11 @@
 
 // int		main(void)
 // {
-// 	char	*s;
-// 	//char	*copy;
+// 	char	*s1;
 
-// 	s = "3 6 ";
-// 	//copy = NULL;
-// 	//copy = ft_strtrim(s);
-// 	printf("rsl: %s\n", ft_strtrim(s));
-// 	// printf("str: %s\n", s);
-// 	// printf("rsl: %s\n", copy);
-// 	//printf("ptr: %p\n", copy);
-
+// 	s1 = "   ";
+// 	printf("str: %s\n", s1);
+// 	printf("rsl: %s\n", ft_strtrim(s1));
 // 	return (0);
 // }
 
@@ -33,7 +27,7 @@
 char				*ft_strtrim(char const *s)
 {
 	char			*copy;
-	char			*ptr;
+	//char			*ptr;
 	char			*beg;
 	char			*end;
 
@@ -46,12 +40,19 @@ char				*ft_strtrim(char const *s)
 		// 	return (ft_strcpy(copy, s));
 		// }
 		beg = ft_skipspace((char*)s);
-		end = ft_skipspace_end((char*)s);
+		end = ft_skipspace_end((char*)beg);
+		// printf("%s\n", "------");
+		// printf("str: %p\n", s);
+		// printf("beg: %p\n", beg);
+		// printf("end: %p\n", end);
+		// printf("%s\n", "------");
 		if (!(copy = (char*)malloc(sizeof(char) * (ft_ptrlen(beg, end) + 1))))
 			return (NULL);
+		// printf("%s\n", "test2");
 		ft_strncpy(copy, beg, ft_ptrlen(beg, end));
-		ptr = copy;
-		ptr[ft_ptrlen(beg, end)] = '\0';
+		// ptr = copy;
+		// ptr[ft_ptrlen(beg, end)] = '\0';
+		copy[ft_ptrlen(beg, end)] = '\0';
 		return (copy);
 	}
 	else

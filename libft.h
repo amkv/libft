@@ -16,6 +16,7 @@
 # include <string.h> // NULL, size_t
 # include <stdlib.h> // malloc, free
 # include <unistd.h> // write
+# include <stdio.h> // del
 
 /* DONE */
 size_t	ft_strlen(const char *s);
@@ -78,9 +79,9 @@ char	*ft_skipspace(char *s);
 char	*ft_skipspace_end(char *s);
 size_t	ft_ptrlen(char *beg, char *end);
 char	*ft_ptrtoend(char *s);
+char	*ft_strtrim(char const *s);
 
 /* IN PROGRESS */
-char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
 
