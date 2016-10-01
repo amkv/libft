@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_ptrtoend.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akalmyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/22 14:41:02 by akalmyko          #+#    #+#             */
-/*   Updated: 2016/09/22 14:41:03 by akalmyko         ###   ########.fr       */
+/*   Created: 2016/09/30 20:11:05 by akalmyko          #+#    #+#             */
+/*   Updated: 2016/09/30 20:11:06 by akalmyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+// #include <stdio.h>
 
-char				*ft_strcpy(char *dst, const char *src)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (dst);
-}
-
-// char				*ft_strcpy(char *dst, const char *src)
+// int		main(void)
 // {
-// 	while (*src)
-// 		*(unsigned char*)dst++ = *(unsigned char*)src++;
-// 	*(unsigned char*)dst = '\0';
-// 	return (dst);
+// 	char	*str;
+
+// 	str = "tesd";
+// 	printf("%p\n", str);
+// 	printf("%s\n", ft_ptrtoend(str) - 1);
+// 	printf("%p\n", ft_ptrtoend(str));
+// 	return (0);
 // }
+
+char	*ft_ptrtoend(char *s)
+{
+	if (s)
+	{
+		while (*s)
+			s++;
+		return (s);
+	}
+	else
+		return (NULL);
+}

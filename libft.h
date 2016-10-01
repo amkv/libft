@@ -76,6 +76,8 @@ char	ft_nextchar(char c);
 char	ft_prvschar(char c);
 char	*ft_skipspace(char *s);
 char	*ft_skipspace_end(char *s);
+size_t	ft_ptrlen(char *beg, char *end);
+char	*ft_ptrtoend(char *s);
 
 /* IN PROGRESS */
 char	*ft_strtrim(char const *s);

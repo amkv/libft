@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_skipspace_end.c                                 :+:      :+:    :+:   */
+/*   ft_ptrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akalmyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/30 16:46:52 by akalmyko          #+#    #+#             */
-/*   Updated: 2016/09/30 16:46:54 by akalmyko         ###   ########.fr       */
+/*   Created: 2016/09/30 19:48:40 by akalmyko          #+#    #+#             */
+/*   Updated: 2016/09/30 19:48:42 by akalmyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,34 @@
 
 // int		main(void)
 // {
-// 	char	*s;
+// 	char	*str;
+// 	char	*beg;
+// 	char	*end;
+// 	int		index;
 
-// 	s = "tesd   ";
-// 	printf("begin: %s\n", s);
-// 	printf("result: %s\n", ft_skipspace_end(s));
+// 	str = "method";
+// 	index = 2;
+// 	beg = str+2;
+// 	end = str;
+// 	while (*end)
+// 		end++;
+// 	end = end - 2;
+// 	printf("%p\n", str);
+// 	printf("%p\n", str + 1);
+// 	printf("%p\n", beg);
+// 	printf("%p\n", end);
+// 	printf("%c\n", *beg);
+// 	printf("%c\n", *end);
+// 	printf("%zu\n", ft_ptrlen(beg, end));
 // 	return (0);
 // }
 
-char				*ft_skipspace_end(char *s)
+size_t		ft_ptrlen(char *beg, char *end)
 {
-	unsigned int	len;
+	size_t		len;
 
-	if (s)
-	{
-		len = ft_strlen(s);
-		if (len == 0)
-			return (s);
-		s = s + (len - 1);
-		while ((*s == ' ' || *s == '\n' || *s == '\t') && len-- > 0)
-			s--;
-		return (s);
-	}
-	else
-		return (NULL);
+	len = 0;
+	while (*beg++ != *end)
+		len++;
+	return (len + 1);
 }

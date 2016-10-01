@@ -10,77 +10,50 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-
-Allocates (with malloc(3)) and returns a copy of the string given as argument
-without whitespaces at the beginning or at the end of the string. 
-Will be considered as whitespaces the following 
-characters ’ ’, ’\n’ and ’\t’. 
-If s has no whitespaces at the beginning or at the end, 
-the function returns a copy of s. 
-If the allocation fails the function returns NULL.
-
-return:
-The “fresh” trimmed string or a copy of s.
-*/
-
 #include "libft.h"
 // #include <stdio.h>
 
 // int		main(void)
 // {
 // 	char	*s;
-// 	char	*copy;
+// 	//char	*copy;
 
-// 	s = "test";
-// 	copy = ft_strtrim(s);
-// 	printf("s: %s\n", s);
-// 	printf("c: %s\n", copy);
+// 	s = "3 6 ";
+// 	//copy = NULL;
+// 	//copy = ft_strtrim(s);
+// 	printf("rsl: %s\n", ft_strtrim(s));
+// 	// printf("str: %s\n", s);
+// 	// printf("rsl: %s\n", copy);
+// 	//printf("ptr: %p\n", copy);
+
 // 	return (0);
 // }
 
+
 char				*ft_strtrim(char const *s)
 {
-	unsigned int	len;
 	char			*copy;
 	char			*ptr;
-	int				tmbl;
+	char			*beg;
+	char			*end;
 
 	if (s)
 	{
-		len = ft_strlen(s);
-		copy = (char*)malloc(sizeof(char) * (len + 1));
-		if (copy)
-		{
-			ptr = copy;
-			while (*s)
-			{
-				tmbl = ft_isspace(*s);
-				if (!tmbl)
-				{
-					*copy++ = *s;
-				}
-				s++;
-			}
-			*ptr = '\0';
-			return (copy);
-		}
-		else
+		// ptr = ft_ptrtoend((char*)s);
+		// if (!ft_isspace(*s) && !ft_isspace(*--ptr))
+		// {
+		// 	copy = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1));
+		// 	return (ft_strcpy(copy, s));
+		// }
+		beg = ft_skipspace((char*)s);
+		end = ft_skipspace_end((char*)s);
+		if (!(copy = (char*)malloc(sizeof(char) * (ft_ptrlen(beg, end) + 1))))
 			return (NULL);
+		ft_strncpy(copy, beg, ft_ptrlen(beg, end));
+		ptr = copy;
+		ptr[ft_ptrlen(beg, end)] = '\0';
+		return (copy);
 	}
 	else
 		return (NULL);
 }
-
-
-char *sptr;
-sptr = s;
-while (*s)
-{
-	sptr = s;
-	while (*sptr == ' ' || *sptr == '\n' || *sptr == '\t')
-		sptr++;
-}
-
-
-
