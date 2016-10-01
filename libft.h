@@ -47,11 +47,6 @@ int		ft_strncmp(const char*s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 size_t	ft_strlcat(char *dst, const char *src, size_t size); // доразобраться // ошибка в тесте
 
-/* ADDONS */
-int		ft_isspace(int c);
-char	ft_nextchar(char c);
-char	ft_prvschar(char c);
-
 /* Second part */
 void	ft_putchar(char c); // проверить на unicode
 void	ft_putstr(char const *s);
@@ -73,9 +68,16 @@ void	ft_putnbr_fd(int n, int fd);
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+
+/* ADDONS */
+int		ft_isspace(int c);
+char	ft_nextchar(char c);
+char	ft_prvschar(char c);
+char	*ft_skipspace(char *s);
+char	*ft_skipspace_end(char *s);
 
 /* IN PROGRESS */
-char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
