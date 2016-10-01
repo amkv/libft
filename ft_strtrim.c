@@ -39,7 +39,7 @@ char				*ft_strtrim(char const *s)
 		// 	copy = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1));
 		// 	return (ft_strcpy(copy, s));
 		// }
-		beg = ft_skipspace((char*)s);
+		beg = ft_skipspace_beg((char*)s);
 		end = ft_skipspace_end((char*)beg);
 		// printf("%s\n", "------");
 		// printf("str: %p\n", s);

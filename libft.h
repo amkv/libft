@@ -18,6 +18,13 @@
 # include <unistd.h> // write
 # include <stdio.h> // del
 
+typedef	struct 		s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
+
 /* DONE */
 size_t	ft_strlen(const char *s);
 char	*ft_strdup(const char *s1);
@@ -75,15 +82,26 @@ char	*ft_strjoin(char const *s1, char const *s2);
 int		ft_isspace(int c);
 char	ft_nextchar(char c);
 char	ft_prvschar(char c);
-char	*ft_skipspace(char *s);
+char	*ft_skipspace_beg(char *s);
 char	*ft_skipspace_end(char *s);
 size_t	ft_ptrlen(char *beg, char *end);
 char	*ft_ptrtoend(char *s);
 char	*ft_strtrim(char const *s);
+size_t	ft_strchr_qt(char *s, char c);
 
 /* IN PROGRESS */
 char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
+
+/* BONUS */
+t_list	*ft_lstnew(void const *content, size_t content_size);
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void	ft_lstdel(t_list **alst, void (*del)(void*, size_t));
+void	ft_lstadd(t_list **alst, t_list *new);
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+
 
 /*
 1.
