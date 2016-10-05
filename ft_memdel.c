@@ -43,7 +43,7 @@ A pointer’s address that needs its memory freed and set to NULL.
 void	ft_memdel(void **ap)
 {
 	// // printf("%p\n", *ap);
-	if (ap && *ap)
+	if (ap)
 	{
 		free(*ap);
 		*ap = NULL;

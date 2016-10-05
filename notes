@@ -3,8 +3,36 @@
 дописать еще +4 собственные функции
 makefile изменить *.c
 проверка на protected if (s && *s) -- можно ли только s ? (вероятнее всего, что да - и так правильнее)
-ft_putnbr --- другой вариант
+почистить все файлы на norminette
+скомпоновать файлы из temp и work - сохранить все проверочные main
+там где передаются функциюю в фунцию нет main:
+ft_strmapi
+ft_striter
+ft_striteri
 
+ft_putnbr --- другой вариант
+--------------------
+#AddressSanitizer
+https://github.com/google/sanitizers/wiki/AddressSanitizer
+https://en.wikipedia.org/wiki/AddressSanitizer
+
+gcc -I. -fsanitize=address
+./a.out
+--------------------
+nm ft*.o | grep U
+nm ft*.o | grep T | wc -l
+nm -u ./a.out
+
+ar t libft.a
+--------------------
+Strequ
+Strnequ
+
+РАЗОБРАТЬ!
+itoa
+strsplit
+strnstr
+--------------------
 
 # производит поиск в папке с именами ft_
 # жждет ввода значения от 1 до ... (количество файлов ft_)
@@ -14,30 +42,3 @@ ft_putnbr --- другой вариант
 # (1) ft_test.c
 # (2) ft_desk.c
 # ...
-
-
-#AddressSanitizer
-https://github.com/google/sanitizers/wiki/AddressSanitizer
-https://en.wikipedia.org/wiki/AddressSanitizer
-
-nm ft*.o | grep U
-nm ft*.o | grep T | wc -l
-
-gcc -I. -fsanitize=address
-./a.out
-
-nm -u ./a.out
-
-ar t libft.a
-
-
-memset
-strnstr
-strncmp
-Strequ
-Strnequ
-
-РАЗОБРАТЬ!
-itoa
-strsplit
-strnstr

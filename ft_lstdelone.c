@@ -28,16 +28,52 @@
 **
 ** free
 */
+// void	ft_del(void *v, size_t n);
+
+// github
+void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
+{
+	t_list	*tmp;
+
+	if (alst && *alst)
+	{
+		tmp = (*alst)->next;
+		if (del)
+			del((*alst)->content, (*alst)->content_size);
+		(*alst)->content = NULL;
+		free(*alst);
+		*alst = tmp;
+	}
+}
 
 // int		main(void)
 // {
+// 	t_list	*list1;
+// 	t_list	*list2;
+// 	char	*content1;
+// 	char	*content2;
+// 	void	(*del)(void *, size_t);
 
+// 	del = ft_bzero;
+// 	content1 = "test1";
+// 	content2 = "test2";
+// 	printf("string: %s\n", content1);
+// 	printf("sizeof: %zu\n", sizeof(content1));
+
+// 	list1 = ft_lstnew(content1, sizeof(content1));
+// 	list2 = ft_lstnew(content2, sizeof(content2));
 // 	return (0);
 // }
 
-void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
-{
-	alst = NULL;
-	del = NULL;
-}
+// void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
+// {
+// 	alst->content = del(alst->content, sizeof(alst->content));
+// 	// alst = NULL;
+// 	// del = NULL;
+// }
 
+// void	ft_del(void *v, size_t n)
+// {
+// 	while (n-- > 0)
+// 		v++;
+// }
