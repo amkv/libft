@@ -22,15 +22,22 @@ https://en.wikipedia.org/wiki/AddressSanitizer
 
 nm ft*.o | grep U
 nm ft*.o | grep T | wc -l
-gcc -I. -fsanitize=address 
+
+gcc -I. -fsanitize=address
+./a.out
+
+nm -u ./a.out
+
+ar t libft.a
 
 
 memset
 strnstr
 strncmp
-
-itoa
-memset
-strsplit
 Strequ
 Strnequ
+
+РАЗОБРАТЬ!
+itoa
+strsplit
+strnstr

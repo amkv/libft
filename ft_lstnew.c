@@ -28,17 +28,17 @@
 ** 
 ** malloc(3), free(3)
 */
-
-// int				main(void)
+// int		main(void)
 // {
-// 	t_list		*new;
-// 	char		*content;
+// 	t_list	*new;
+// 	void	*content;
+// 	size_t	size;
 
-// 	content = "test1";
-// 	new = ft_lstnew(content, sizeof(content));
-// 	printf("content:  %s\n", new->content);
-// 	printf("con size: %zu\n", new->content_size);
-// 	printf("pointer:  %p\n", new->next);
+// 	size = 2;
+// 	content = "test";
+// 	printf("size: %zu\n", sizeof(content));
+// 	new = ft_lstnew(content, sizeof(content) * size);
+// 	printf("%s\n", new->content);
 // 	return (0);
 // }
 

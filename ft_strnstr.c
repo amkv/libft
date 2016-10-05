@@ -12,25 +12,45 @@
 
 #include "libft.h"
 
+// char	*ft_strnstr(const char *big, const char *little, size_t len)
+// {
+// 	char const	*bigbox;
+// 	char const	*littlebox;
+
+// 	littlebox = little;
+// 	while (*big != '\0')
+// 	{
+// 		bigbox = big;
+// 		while (*little != '\0' && *big == *little && len > 0)
+// 		{
+// 			++big;
+// 			++little;
+// 			--len;
+// 		}
+// 		if (*little == '\0')
+// 			return ((char *)bigbox);
+// 		big = bigbox + 1;
+// 		little = littlebox;
+// 	}
+// 	return (*little == '\0' ? (char *)big : NULL);
+// }
+
+// :github
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	char const	*bigbox;
-	char const	*littlebox;
+	size_t	index;
+	size_t	index2;
 
-	littlebox = little;
-	while (*big != '\0')
+	if (!*little)
+		return ((char *)big);
+	index2 = 0;
+	while (big[index2])
 	{
-		bigbox = big;
-		while (*little != '\0' && *big == *little && len > 0)
-		{
-			++big;
-			++little;
-			--len;
-		}
-		if (*little == '\0')
-			return ((char *)bigbox);
-		big = bigbox + 1;
-		little = littlebox;
+		index = 0;
+		while (big[index2 + index] == little[index] && index2 + index < len)
+			if (!little[++index])
+				return ((char *)(big + index2));
+		index2++;
 	}
-	return (*little == '\0' ? (char *)big : NULL);
+	return (0);
 }

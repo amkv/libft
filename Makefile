@@ -14,11 +14,12 @@
 
 NAME = libft.a
 NAME2 = test.a
-# NAME = test
 FLAGS = -Wall -Wextra -Werror -c
 CFILES = *.c
 OFILES = $(CFILES:.c=.o)
 CC = gcc
+
+.PHONY: clean fclean re all
 
 all: $(NAME)
 
