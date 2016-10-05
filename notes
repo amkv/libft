@@ -14,3 +14,23 @@ ft_putnbr --- другой вариант
 # (1) ft_test.c
 # (2) ft_desk.c
 # ...
+
+
+#AddressSanitizer
+https://github.com/google/sanitizers/wiki/AddressSanitizer
+https://en.wikipedia.org/wiki/AddressSanitizer
+
+nm ft*.o | grep U
+nm ft*.o | grep T | wc -l
+gcc -I. -fsanitize=address 
+
+
+memset
+strnstr
+strncmp
+
+itoa
+memset
+strsplit
+Strequ
+Strnequ

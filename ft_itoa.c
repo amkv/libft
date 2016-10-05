@@ -12,11 +12,26 @@
 
 #include "libft.h"
 
+/*
+** Allocate (with malloc(3)) and returns a “fresh” string ending
+** with ’\0’ representing the integer n given as argument. Negative numbers must be supported. If the allocation fails, the function returns NULL.
+*/
+
+// int		main(void)
+// {
+// 	char	n;
+
+// 	n = 'd';
+// 	printf("%s\n", ft_itoa(n));
+// 	return (0);
+// }
+
 char	*ft_itoa(int n)
 {
-	char *t;
+	char	*result;
+	printf("%c\n", n);
 
-	n = 0;
-	t = "g";
-	return (t);
+
+	result = NULL;
+	return (result);
 }

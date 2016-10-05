@@ -60,98 +60,35 @@ char	**ft_strsplit(char const *s, char c)
 	//end = (char*)s;
 	// while (*s != '\0')
 	// {
-		printf("%s\n", "--------------------");
+		//printf("%s\n", "--------------------");
 		beg = ft_skipchr((char*)s, c);
 		end = ft_skiptochr(beg, c);
-		printf("beg: %c\n", *beg);
-		printf("end: %c\n", *end);
-		printf("%s\n", "-----");
-		printf("beg ptr: %p\n", beg);
-		printf("end ptr: %p\n", end);
-		printf("%s\n", "-----");
+		//printf("beg: %c\n", *beg);
+		//printf("end: %c\n", *end);
+		//printf("%s\n", "-----");
+		//printf("beg ptr: %p\n", beg);
+		//printf("end ptr: %p\n", end);
+		//printf("%s\n", "-----");
 		temp = (char*)malloc(sizeof(char) * (ft_ptrlen(beg, end) + 1));
 		if (!temp)
 			return (NULL);
-		printf("length: %zu\n", ft_ptrlen(beg, end));
-		printf("%s\n", "-----");
+		//printf("length: %zu\n", ft_ptrlen(beg, end));
+		//printf("%s\n", "-----");
 		ft_strncpy(temp, beg, ft_ptrlen(beg, end));
-		printf("ft_strncpy: %s\n", temp);
-		printf("%s\n", "-----");
-		printf("index (1): %zu\n", index);
+		//printf("ft_strncpy: %s\n", temp);
+		//printf("%s\n", "-----");
+		//printf("index (1): %zu\n", index);
 		result[index++] = temp;
-		printf("index (2): %zu\n", index);
-		printf("%s\n", "-----");
+		//printf("index (2): %zu\n", index);
+		//printf("%s\n", "-----");
 		free(temp);
 		temp = NULL;
-		printf("free(temp): %s\n", temp);
-		printf("%s\n", "-----");
-		printf("s ptr:%p\n", s);
+		//printf("free(temp): %s\n", temp);
+		//printf("%s\n", "-----");
+		//printf("s ptr:%p\n", s);
 		s = s + ft_ptrlen(beg, end);
-		printf("s ptr:%p\n", s);
-		printf("%c\n", *s);
-
-		printf("%s\n", "--------------------");
-		beg = ft_skipchr((char*)s, c);
-		end = ft_skiptochr(beg, c);
-		printf("beg: %c\n", *beg);
-		printf("end: %c\n", *end);
-		printf("%s\n", "-----");
-		printf("beg ptr: %p\n", beg);
-		printf("end ptr: %p\n", end);
-		printf("%s\n", "-----");
-		temp = (char*)malloc(sizeof(char) * (ft_ptrlen(beg, end) + 1));
-		if (!temp)
-			return (NULL);
-		printf("length: %zu\n", ft_ptrlen(beg, end));
-		printf("%s\n", "-----");
-		ft_strncpy(temp, beg, ft_ptrlen(beg, end));
-		printf("ft_strncpy: %s\n", temp);
-		printf("%s\n", "-----");
-		printf("index (1): %zu\n", index);
-		result[index++] = temp;
-		printf("index (2): %zu\n", index);
-		printf("%s\n", "-----");
-		free(temp);
-		temp = NULL;
-		printf("free(temp): %s\n", temp);
-		printf("%s\n", "-----");
-		printf("s ptr:%p\n", s);
-		s = s + ft_ptrlen(beg, end);
-		printf("s ptr:%p\n", s);
-		printf("%c\n", *s);
-
-		printf("%s\n", "--------------------");
-		beg = ft_skipchr((char*)s, c);
-		end = ft_skiptochr(beg, c);
-		printf("beg: %c\n", *beg);
-		printf("end: %c\n", *end);
-		printf("%s\n", "-----");
-		printf("beg ptr: %p\n", beg);
-		printf("end ptr: %p\n", end);
-		printf("%s\n", "-----");
-		temp = (char*)malloc(sizeof(char) * (ft_ptrlen(beg, end) + 1));
-		if (!temp)
-			return (NULL);
-		printf("length: %zu\n", ft_ptrlen(beg, end));
-		printf("%s\n", "-----");
-		ft_strncpy(temp, beg, ft_ptrlen(beg, end));
-		printf("ft_strncpy: %s\n", temp);
-		printf("%s\n", "-----");
-		printf("index (1): %zu\n", index);
-		result[index++] = temp;
-		printf("index (2): %zu\n", index);
-		printf("%s\n", "-----");
-		free(temp);
-		temp = NULL;
-		printf("free(temp): %s\n", temp);
-		printf("%s\n", "-----");
-		printf("s ptr:%p\n", s);
-		s = s + ft_ptrlen(beg, end);
-		printf("s ptr:%p\n", s);
-		printf("%c\n", *s);
-
-
-
+		//printf("s ptr:%p\n", s);
+		//printf("%c\n", *s);
 	// }
 	return (result);
 }
