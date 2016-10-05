@@ -78,6 +78,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 
+t_list	*ft_lstnew(void const *content, size_t content_size);
+
 /* ADDONS */
 int		ft_isspace(int c);
 char	ft_nextchar(char c);
@@ -97,7 +99,7 @@ char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
 
 /* BONUS */
-t_list	*ft_lstnew(void const *content, size_t content_size);
+
 void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstdel(t_list **alst, void (*del)(void*, size_t));
 void	ft_lstadd(t_list **alst, t_list *new);
