@@ -28,9 +28,23 @@ None.
 // 	return (0);
 // }
 
-void	ft_striter(char *s, void (*f)(char *))
+// void	ft_striter(char *s, void (*f)(char *))
+// {
+// 	if (s && s)
+// 		while (*s)
+// 			f(s++);
+// }
+
+//github
+void	ft_striter(char *s, void (*f)(char*))
 {
-	if (s && s)
-		while (*s)
-			f(s++);
+	int	i;
+
+	i = 0;
+	if (s && f)
+		while (s[i] != '\0')
+		{
+			(*f)(s + i);
+			i++;
+		}
 }

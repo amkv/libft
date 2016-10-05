@@ -1,21 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akalmyko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/05 15:27:48 by akalmyko          #+#    #+#             */
-/*   Updated: 2016/10/05 15:27:49 by akalmyko         ###   ########.fr       */
+/*   Created: 2016/10/05 15:32:44 by akalmyko          #+#    #+#             */
+/*   Updated: 2016/10/05 15:32:46 by akalmyko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-**
-**
-*/
 
 // int		main(void)
 // {
@@ -23,28 +18,20 @@
 // 	return (0);
 // }
 
-// void	ft_lstdel(t_list **alst, void (*del)(void*, size_t))
+// void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 // {
+
 
 // }
 
-// github
-void	ft_lstdel(t_list **alst, void (*del)(void*, size_t))
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	t_list	*next_lst;
-	t_list	*tmp;
-
-	if (alst)
+	if (lst && f)
 	{
-		next_lst = *alst;
-		while (next_lst != NULL)
+		while (lst)
 		{
-			if (del)
-				(*del)(next_lst->content, (*next_lst).content_size);
-			tmp = next_lst->next;
-			free(next_lst);
-			next_lst = tmp;
+			f(lst);
+			lst = lst->next;
 		}
-		*alst = NULL;
 	}
 }

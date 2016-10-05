@@ -42,28 +42,55 @@
 // 	return (0);
 // }
 
-t_list			*ft_lstnew(void const *content, size_t content_size)
-{
-	t_list		*new;
+// t_list			*ft_lstnew(void const *content, size_t content_size)
+// {
+// 	t_list		*new;
 
-	if((new = (t_list*)malloc(sizeof(t_list))))
+// 	if((new = (t_list*)malloc(sizeof(t_list))))
+// 	{
+// 		if (content)
+// 		{
+// 			if ((new->content = (void*)malloc(sizeof(content_size))))
+// 			{
+// 				ft_memcpy(new->content, content, content_size);
+// 				new->content_size = content_size;
+// 				new->next = NULL;
+// 				return (new);
+// 			}
+// 		}
+// 		else
+// 		{
+// 			new->content = NULL;
+// 			new->content_size = 0;
+// 			return (new);
+// 		}	
+// 	}
+// 	return (NULL);
+// }
+
+// github
+t_list	*ft_lstnew(void const *content, size_t content_size)
+{
+	t_list	*new;
+	void	*ptr;
+
+	new = NULL;
+	if ((new = (t_list *)malloc(sizeof(t_list))) == NULL)
+		return (NULL);
+	if (content == NULL)
 	{
-		if (content)
-		{
-			if ((new->content = (void*)malloc(sizeof(content_size))))
-			{
-				ft_memcpy(new->content, content, content_size);
-				new->content_size = content_size;
-				new->next = NULL;
-				return (new);
-			}
-		}
-		else
-		{
-			new->content = NULL;
-			new->content_size = 0;
-			return (new);
-		}	
+		new->content = NULL;
+		new->content_size = 0;
 	}
-	return (NULL);
+	else
+	{
+		ptr = NULL;
+		if ((ptr = (void*)ft_strnew(content_size)) == NULL)
+			return (NULL);
+		ft_memcpy(ptr, content, content_size);
+		new->content = ptr;
+		new->content_size = content_size;
+	}
+	new->next = NULL;
+	return (new);
 }

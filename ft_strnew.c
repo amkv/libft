@@ -32,18 +32,38 @@ The string allocated and initialized to 0.
 // 	return (0);
 // }
 
+// char	*ft_strnew(size_t size)
+// {
+// 	char	*str;
+// 	char	*ptr;
+
+// 	if (!(str = (char*)malloc(sizeof(char) * size + 1)))
+// 		return (NULL);
+// 	ptr = str;
+// 	while (*ptr)
+// 	{
+// 		*ptr = '\0';
+// 		ptr++;
+// 	}
+// 	return (str);
+// }
+
+//github
 char	*ft_strnew(size_t size)
 {
 	char	*str;
-	char	*ptr;
+	int		i;
+	int		j;
 
-	if (!(str = (char*)malloc(sizeof(char) * size + 1)))
+	i = 0;
+	j = (int)size;
+	str = (char*)malloc(j + 1);
+	if (!str)
 		return (NULL);
-	ptr = str;
-	while (*ptr)
+	while (i <= j)
 	{
-		*ptr = '\0';
-		ptr++;
+		str[i] = '\0';
+		i++;
 	}
 	return (str);
 }
