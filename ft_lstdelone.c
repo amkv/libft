@@ -48,6 +48,11 @@
 
 // 	list1 = ft_lstnew(content1, sizeof(content1));
 // 	list2 = ft_lstnew(content2, sizeof(content2));
+
+// 	ft_lstdelone(list1, del);
+
+// 	printf("%s\n", list1->content1);
+// 	printf("%s\n", list1->content2);
 // 	return (0);
 // }
 
@@ -64,18 +69,28 @@
 // 		v++;
 // }
 
-// github
+// // github
+// void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
+// {
+// 	t_list	*tmp;
+
+// 	if (alst && *alst)
+// 	{
+// 		tmp = (*alst)->next;
+// 		if (del)
+// 			del((*alst)->content, (*alst)->content_size);
+// 		(*alst)->content = NULL;
+// 		free(*alst);
+// 		*alst = tmp;
+// 	}
+// }
+
+//Vitaly
 void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
 {
-	t_list	*tmp;
-
-	if (alst && *alst)
+	if (*alst)
 	{
-		tmp = (*alst)->next;
-		if (del)
-			del((*alst)->content, (*alst)->content_size);
-		(*alst)->content = NULL;
-		free(*alst);
-		*alst = tmp;
+		del ((*alst)->content, ((*alst)->content_size));
+		ft_memdel((void **)alst);
 	}
 }

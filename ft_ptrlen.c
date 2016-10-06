@@ -11,31 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
-
-// int		main(void)
-// {
-// 	char	*str;
-// 	char	*beg;
-// 	char	*end;
-// 	int		index;
-
-// 	str = "method";
-// 	index = 2;
-// 	beg = str+2;
-// 	end = str;
-// 	while (*end)
-// 		end++;
-// 	end = end - 2;
-// 	printf("%p\n", str);
-// 	printf("%p\n", str + 1);
-// 	printf("%p\n", beg);
-// 	printf("%p\n", end);
-// 	printf("%c\n", *beg);
-// 	printf("%c\n", *end);
-// 	printf("%zu\n", ft_ptrlen(beg, end));
-// 	return (0);
-// }
 
 size_t		ft_ptrlen(char *beg, char *end)
 {

@@ -11,18 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
-
-// int		main(void)
-// {
-// 	int		n;
-// 	int		fd;
-
-// 	n = -12;
-// 	fd = 1;
-// 	ft_putnbr_fd(n, fd);
-// 	return (0);
-// }
 
 void	ft_putnbr_fd(int n, int fd)
 {

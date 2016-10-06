@@ -11,18 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
-
-// int		main(void)
-// {
-// 	char	*str;
-
-// 	str = "tesd";
-// 	printf("%p\n", str);
-// 	printf("%s\n", ft_ptrtoend(str) - 1);
-// 	printf("%p\n", ft_ptrtoend(str));
-// 	return (0);
-// }
 
 char	*ft_ptrtoend(char *s)
 {

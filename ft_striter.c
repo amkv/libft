@@ -28,12 +28,6 @@ None.
 // 	return (0);
 // }
 
-// void	ft_striter(char *s, void (*f)(char *))
-// {
-// 	if (s && s)
-// 		while (*s)
-// 			f(s++);
-// }
 
 //github
 void	ft_striter(char *s, void (*f)(char*))

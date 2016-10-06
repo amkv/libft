@@ -11,32 +11,10 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
-
-/*
-Sets every character of the string to the value ’\0’.
-
-return:
-None.
-*/
-
-// int		main(void)
-// {
-// 	char	*str;
-// 	int		size;
-
-// 	size = 5;
-// 	str = ft_strnew(size);
-// 	ft_strncpy(str, "test", size);
-// 	printf("%s\n", str);
-// 	ft_strclr(str);
-// 	printf("%s\n", str);
-// 	return (0);
-// }
 
 void	ft_strclr(char *s)
 {
 	if (s && *s)
 		while (*s)
-			*s++ = '\0';	
+			*s++ = '\0';
 }

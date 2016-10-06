@@ -11,16 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
-
-// int		main(void)
-// {
-// 	char	*s;
-
-// 	s = "test";
-// 	ft_putendl_fd(s);
-// 	return (0);
-// }
 
 void	ft_putendl_fd(char const *s, int fd)
 {

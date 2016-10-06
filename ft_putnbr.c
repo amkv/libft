@@ -11,20 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
-
-// int		main(void)
-// {
-// 	int		n;
-
-// 	n = -5;
-// 	while (n < 15)
-// 	{
-// 		ft_putnbr(n++);
-// 		ft_putchar('\n');
-// 	}
-// 	return (0);
-// }
 
 void	ft_putnbr(int n)
 {

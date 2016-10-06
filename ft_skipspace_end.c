@@ -11,17 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
-
-// int		main(void)
-// {
-// 	char	*s;
-
-// 	s = "tesd   ";
-// 	printf("begin: %s\n", s);
-// 	printf("result: %s\n", ft_skipspace_end(s));
-// 	return (0);
-// }
 
 char				*ft_skipspace_end(char *s)
 {

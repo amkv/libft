@@ -12,20 +12,14 @@
 
 #include "libft.h"
 
-// int		main(void)
-// {
-// 	char	*s;
-// 	char	c;
-
-// 	s = "    test";
-// 	c = ' ';
-// 	printf("%s\n", ft_skipchr(s, c));
-// 	return (0);
-// }
-
-char				*ft_skipchr(char *s, char c)
+char		*ft_skipchr(char *s, char c)
 {
-	while (*s == c)
-		s++;
-	return (s);
+	if (s)
+	{
+		while (*(unsigned char*)s == (unsigned char)c)
+			s++;
+		return ((char*)s);
+	}
+	else
+		return (NULL);
 }

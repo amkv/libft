@@ -11,17 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
-
-// int		main(void)
-// {
-// 	char	c;
-// 	char	next;
-// 	c = 88;
-// 	next = ft_nextchar(c);
-// 	printf("%c\n", next);
-// 	return (0);
-// }
 
 char	ft_nextchar(char c)
 {

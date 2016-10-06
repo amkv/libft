@@ -11,23 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdlib.h>
-
-// int		main(void)
-// {
-// 	char	*b;
-// 	char	c;
-// 	size_t	len;
-
-// 	b = (char*)malloc(sizeof(char)*30);
-// 	memcpy(b, "test", 4);
-// 	printf("%s\n", b);
-// 	c = '0';
-// 	len = 4;
-// 	//memset(b, c, len);
-// 	printf("%s\n", b);
-// 	return (0);
-// }
 
 void	*ft_memset(void *b, int c, size_t len)
 {

@@ -11,17 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
-
-// int		main(void)
-// {
-// 	char	c;
-// 	char	next;
-// 	c = 65;
-// 	next = ft_prvschar(c);
-// 	printf("%c\n", next);
-// 	return (0);
-// }
 
 char	ft_prvschar(char c)
 {

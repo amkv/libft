@@ -42,91 +42,10 @@ free
 // 	//printf("result[0]: %s\n", str[0]);
 // 	//printf("result[1]: %s\n", str[1]);
 // 	//printf("%s\n", str[2]);
+//  	while (**str)
+// 		printf("%s\n", *str++);
 // 	printf("---end of file---\n");
 //  	return (0);
-// }
-
-// char	**ft_strsplit(char const *s, char c)
-// {
-// 	char	**result;
-// 	char	*beg;
-// 	char	*end;
-// 	char	*temp;
-// 	size_t	index;
-
-// 	result = (char**)malloc(sizeof(char) * (ft_strchr_qt((char*)s, c)));
-// 	index = 0;
-// 	//beg = (char*)s;
-// 	//end = (char*)s;
-// 	// while (*s != '\0')
-// 	// {
-// 		//printf("%s\n", "--------------------");
-// 		beg = ft_skipchr((char*)s, c);
-// 		end = ft_skiptochr(beg, c);
-// 		//printf("beg: %c\n", *beg);
-// 		//printf("end: %c\n", *end);
-// 		//printf("%s\n", "-----");
-// 		//printf("beg ptr: %p\n", beg);
-// 		//printf("end ptr: %p\n", end);
-// 		//printf("%s\n", "-----");
-// 		temp = (char*)malloc(sizeof(char) * (ft_ptrlen(beg, end) + 1));
-// 		if (!temp)
-// 			return (NULL);
-// 		//printf("length: %zu\n", ft_ptrlen(beg, end));
-// 		//printf("%s\n", "-----");
-// 		ft_strncpy(temp, beg, ft_ptrlen(beg, end));
-// 		//printf("ft_strncpy: %s\n", temp);
-// 		//printf("%s\n", "-----");
-// 		//printf("index (1): %zu\n", index);
-// 		result[index++] = temp;
-// 		//printf("index (2): %zu\n", index);
-// 		//printf("%s\n", "-----");
-// 		free(temp);
-// 		temp = NULL;
-// 		//printf("free(temp): %s\n", temp);
-// 		//printf("%s\n", "-----");
-// 		//printf("s ptr:%p\n", s);
-// 		s = s + ft_ptrlen(beg, end);
-// 		//printf("s ptr:%p\n", s);
-// 		//printf("%c\n", *s);
-// 	// }
-// 	return (result);
-// }
-
-// char	**ft_strsplit(char const *s, char c)
-// {
-// 	char	*beg;
-// 	char	*end;
-// 	char	**str;
-// 	size_t	index;
-// 	char	*temp;
-
-// 	if (s)
-// 	{
-// 		if (!(str = (char**)malloc(sizeof(char*) * (ft_strchr_qt((char*)s, c)))))
-// 			return (NULL);
-// 		beg = (char*)s;
-// 		index = 0;
-// 		while (*s)
-// 		{
-// 			if (*(char*)s == c)
-// 			{
-// 				end = (char*)s - 1;
-// 				temp = (char*)malloc(sizeof(char) * (ft_ptrlen(beg, end)));
-// 				if (!temp)
-// 					return (NULL);
-// 				ft_strncpy(temp, beg, ft_ptrlen(beg, end));
-// 				str[index] = temp;
-// 				beg = end + 2;
-// 				index++;
-// 			}
-// 			s++;
-// 		}
-// 		str[index] = "\0";
-// 		return (str);
-// 	}
-// 	else
-// 		return (NULL);
 // }
 
 static int		ft_find_word(const char *str, int i, char **ret, char c)
@@ -190,3 +109,50 @@ char			**ft_strsplit(char const *s, char c)
 	ret[wc] = 0;
 	return (ret);
 }
+
+// char	**ft_strsplit(char const *s, char c)
+// {
+// 	char	**result;
+// 	char	*beg;
+// 	char	*end;
+// 	char	*temp;
+// 	size_t	index;
+
+// 	result = (char**)malloc(sizeof(char) * (ft_strchr_qt((char*)s, c)));
+// 	index = 0;
+// 	//beg = (char*)s;
+// 	//end = (char*)s;
+// 	// while (*s != '\0')
+// 	// {
+// 		//printf("%s\n", "--------------------");
+// 		beg = ft_skipchr((char*)s, c);
+// 		end = ft_skiptochr(beg, c);
+// 		//printf("beg: %c\n", *beg);
+// 		//printf("end: %c\n", *end);
+// 		//printf("%s\n", "-----");
+// 		//printf("beg ptr: %p\n", beg);
+// 		//printf("end ptr: %p\n", end);
+// 		//printf("%s\n", "-----");
+// 		temp = (char*)malloc(sizeof(char) * (ft_ptrlen(beg, end) + 1));
+// 		if (!temp)
+// 			return (NULL);
+// 		//printf("length: %zu\n", ft_ptrlen(beg, end));
+// 		//printf("%s\n", "-----");
+// 		ft_strncpy(temp, beg, ft_ptrlen(beg, end));
+// 		//printf("ft_strncpy: %s\n", temp);
+// 		//printf("%s\n", "-----");
+// 		//printf("index (1): %zu\n", index);
+// 		result[index++] = temp;
+// 		//printf("index (2): %zu\n", index);
+// 		//printf("%s\n", "-----");
+// 		free(temp);
+// 		temp = NULL;
+// 		//printf("free(temp): %s\n", temp);
+// 		//printf("%s\n", "-----");
+// 		//printf("s ptr:%p\n", s);
+// 		s = s + ft_ptrlen(beg, end);
+// 		//printf("s ptr:%p\n", s);
+// 		//printf("%c\n", *s);
+// 	// }
+// 	return (result);
+// }

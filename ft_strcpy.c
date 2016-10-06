@@ -25,11 +25,3 @@ char				*ft_strcpy(char *dst, const char *src)
 	dst[i] = '\0';
 	return (dst);
 }
-
-// char				*ft_strcpy(char *dst, const char *src)
-// {
-// 	while (*src)
-// 		*(unsigned char*)dst++ = *(unsigned char*)src++;
-// 	*(unsigned char*)dst = '\0';
-// 	return (dst);
-// }

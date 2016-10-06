@@ -12,28 +12,18 @@
 
 #include "libft.h"
 
-// int		main(void)
-// {
-// 	char	*s;
-// 	char	c;
-
-// 	s = "tesd";
-// 	c = ' ';
-// 	printf("%s\n", ft_skiptochr(s, c));
-// 	return (0);
-// }
-
-/*
-** возвращает поинтер на char предшествующий искомому
-*/
-
 char	*ft_skiptochr(char *s, char c)
 {
-	while (*s)
+	if (s)
 	{
-		if (*s == c)
-			return (s - 1);
-		s++;
+		while (*s)
+		{
+			if (*s == c)
+				return (s - 1);
+			s++;
+		}
+		return (s - 1);
 	}
-	return (s - 1);
+	else
+		return (NULL);
 }

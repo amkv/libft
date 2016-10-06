@@ -12,17 +12,6 @@
 
 #include "libft.h"
 
-// int		main(void)
-// {
-// 	char	c;
-// 	int		fd;
-
-// 	c = 'a';
-// 	fd = 1;
-// 	ft_putchar_fd(c, fd);
-// 	return (0);
-// }
-
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);

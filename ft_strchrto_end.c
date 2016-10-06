@@ -12,17 +12,6 @@
 
 #include "libft.h"
 
-// int		main(void)
-// {
-// 	char	*s;
-// 	char	c;
-
-// 	s = "test";
-// 	c = 'd';
-// 	printf("%s\n", ft_strchrto_end(s, c));
-// 	return (0);
-// }
-
 char	*ft_strchrto_end(char *s, char c)
 {
 	char	*copy;
@@ -40,6 +29,6 @@ char	*ft_strchrto_end(char *s, char c)
 		*temp = '\0';
 		return (copy);
 	}
-	else 
+	else
 		return (NULL);
 }

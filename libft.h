@@ -16,7 +16,8 @@
 # include <string.h> // NULL, size_t
 # include <stdlib.h> // malloc, free
 # include <unistd.h> // write
-# include <stdio.h> // del
+# include <stdio.h> // printf // del
+#include <ctype.h> // isalnum // del
 
 typedef	struct 		s_list
 {
@@ -105,46 +106,5 @@ void	ft_lstdel(t_list **alst, void (*del)(void*, size_t)); // ++
 void	ft_lstadd(t_list **alst, t_list *new); // ++
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-
-
-
-/*
-1.
-+ strlen
-+ isalpha
-+ isdigit
-+ isalnum
-+ isascii
-+ isprint
-
-2.
-+ toupper
-+ tolower
-+ memchr
-+ strchr
-+ strrchr
-+ bzero
-
-3.
-+ memcpy
-+ strcpy
-+ strcat
-+ strcmp
-+ strstr
-+ memmove
-+ memcmp
-
-4.
-+ strlcat
-+ strdup
-+ atoi
-+ memccpy
-+ strnstr
-+ strncmp
-+ strncpy
-+ strncat
-
-+ memset
-*/
 
 #endif

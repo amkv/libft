@@ -10,34 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Allocates (with malloc(3)) and returns a “fresh” substring 
-from the string given as argument.
-The substring begins at index start and is of size len.
-If start and len aren’t referng to a valid substring, 
-the behavior is undefined. 
-If the allocation fails, the function returns NULL.
-
-return:
-The substring.
-*/
-
 #include "libft.h"
-// #include <stdio.h>
-
-// int					main(void)
-// {
-// 	char			*s;
-// 	unsigned int	start;
-// 	size_t			len;
-// 	char			substr;
-
-// 	s = "test";
-// 	start = 2;
-// 	len = 4;
-// 	substr = ft_strsub(s, start, len);
-// 	return (0);
-// }
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
@@ -50,14 +23,13 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 		if (str)
 		{
 			ptr = str;
-			while (len-- > 0 && *s != '\0')	
+			while (len-- > 0 && *s != '\0')
 				*ptr++ = s[start++];
 			*ptr = '\0';
-			return (str);		
+			return (str);
 		}
 		else
 			return (NULL);
 	}
 	return (NULL);
 }
-

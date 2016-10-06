@@ -11,21 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
-
-// int		main(void)
-// {
-// 	char	*s;
-
-// 	s = "  \t \t \n   \n\n\n\t";
-// 	//printf("%s\n", s);
-// 	printf("%s\n", s);
-// 	printf("ptr (str): %p\n", s);
-// 	printf("str + skip: %s\n", ft_skipspace_beg(s));
-// 	printf("ptr (str + skip): %p\n", s);
-// 	printf("len: %zu\n", ft_ptrlen(s, s));
-// 	return (0);
-// }
 
 char	*ft_skipspace_beg(char *s)
 {

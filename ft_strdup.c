@@ -12,6 +12,29 @@
 
 #include "libft.h"
 
+// int			main(void)
+// {
+// 	char	*str;
+// 	char	*str2;
+
+// 	str = "tema";
+// 	str2 = NULL;
+// 	printf("Original strdup:		%2s\n\n", strdup(str));
+// 	printf("str2 Before ft_strdup:		%2p\n", str2);
+// 	printf("str2 Before ft_strdup:		%2s\n\n", str2);
+// 	str2 = ft_strdup(str);
+// 	printf("ft_strdup adress:		%2p\n", str2);
+// 	printf("ft_strdup value:		%2s\n\n", str2);
+// 	printf("-----memory for str2-----\n");
+// 	//free(str2);
+// 	//str2 = NULL;
+// 	memmove(str2, "desk", 5);
+// 	printf("string[0] pointer:		%2p\n", &str2[0]);
+// 	printf("string pointer:			%2p\n", str2);
+// 	printf("string value:			%2s\n", str2);
+// 	return (0);
+// }
+
 char		*ft_strdup(const char *s1)
 {
 	int		i;
