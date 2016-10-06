@@ -15,19 +15,11 @@
 char	*ft_strnew(size_t size)
 {
 	char	*str;
-	int		i;
-	int		j;
 
-	i = 0;
-	j = (int)size;
-	str = (char*)malloc(j + 1);
+	str = (char*)malloc(size + 1);
 	if (str)
 	{
-		while (i <= j)
-		{
-			str[i] = '\0';
-			i++;
-		}
+		ft_bzero(str, (size + 1));
 		return (str);
 	}
 	else

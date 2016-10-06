@@ -1,4 +1,4 @@
 #!/bin/zsh
-#make fclean
+make fclean
 echo "---------------------------"
 clear && gcc -Wall -Wextra -Werror ft_* -o test && ./test

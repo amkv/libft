@@ -5,10 +5,8 @@ makefile изменить *.c
 проверка на protected if (s && *s) -- можно ли только s ? (вероятнее всего, что да - и так правильнее)
 почистить все файлы на norminette
 скомпоновать файлы из temp и work - сохранить все проверочные main
-там где передаются функциюю в фунцию нет main:
-ft_strmapi
-ft_striter
-ft_striteri
+static функции где функция в функции
+проверить все функции на линейность объявлений и переменных
 
 ft_putnbr --- другой вариант
 --------------------
@@ -59,5 +57,11 @@ cp ft_ ~/t/libft
 ---------------------
 // int COUNTER = 0;
 // // printf("STEP: %d\n", ++COUNTER);
+---------------------
+gcc -Wall -Wextra -Wfloat-equal -Wundef -Werror -Wint-to-pointer-cast -Wshadow -Wpointer-arith -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wstrict-overflow=5 -Wwrite-strings -Wconversion --pedantic-errors *.c
+
+-Wmissing -prototypes
+-Wstrict -prototypes
+
 
 

@@ -5,7 +5,7 @@ ft_isalpha.c		#OK
 ft_isascii.c		#OK
 ft_isdigit.c		#OK
 ft_isprint.c		#OK
-ft_isspace.c		#нет main
+ft_isspace.c		#OK
 ft_itoa.c			#нет main
 ft_lstadd.c			#нет main
 ft_lstdel.c			#нет main
@@ -45,20 +45,20 @@ ft_strclr.c			#OK
 ft_strcmp.c			#OK
 ft_strcpy.c			#OK
 ft_strdel.c			#OK
-ft_strdup.c			#убрать счетчики
+ft_strdup.c			#OK
 ft_strequ.c			#OK
-ft_striter.c		#нет main
-ft_striteri.c		#нет main
+ft_striter.c		#OK
+ft_striteri.c		#OK
 ft_strjoin.c		#OK
 ft_strlcat.c		#OK
 ft_strlen.c			#OK
 ft_strmap.c			#OK
-ft_strmapi.c		#нет main
+ft_strmapi.c		#OK
 ft_strncat.c		#OK
 ft_strncmp.c		#OK
 ft_strncpy.c		#OK
-ft_strnequ.c		#нет main
-ft_strnew.c			#убрать счетчики
+ft_strnequ.c		#OK
+ft_strnew.c			#OK
 ft_strnstr.c		#OK
 ft_strrchr.c		#OK
 ft_strsplit.c		#разобрать
