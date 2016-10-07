@@ -9,8 +9,8 @@ ft_isspace.c		#OK
 ft_itoa.c			#нет main
 ft_lstadd.c			#OK
 ft_lstdel.c			#OK
-ft_lstdelone.c		#нет main
-ft_lstiter.c		#нет main
+ft_lstdelone.c		#OK
+ft_lstiter.c		#OK
 ft_lstmap.c			#нет main
 ft_lstnew.c			#OK
 ft_memalloc.c		#OK

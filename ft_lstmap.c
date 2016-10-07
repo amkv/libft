@@ -10,6 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Iterates a list lst and applies the function f to each link 
+** to create a “fresh” list (using malloc(3)) 
+** resulting from the successive applications of f. 
+** If the allocation fails, the function returns NULL.
+*/
+
 #include "libft.h"
 
 // int		main(void)

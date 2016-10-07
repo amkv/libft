@@ -12,18 +12,6 @@
 
 #include "libft.h"
 
-// int		main(void)
-// {
-
-// 	return (0);
-// }
-
-// void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
-// {
-
-
-// }
-
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
 	if (lst && f)
