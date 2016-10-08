@@ -10,50 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Iterates a list lst and applies the function f to each link 
-** to create a “fresh” list (using malloc(3)) 
-** resulting from the successive applications of f. 
-** If the allocation fails, the function returns NULL.
-*/
-
 #include "libft.h"
 
-// int		main(void)
-// {
-
-// 	return (0);
-// }
-
-// t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
-// {
-
-
-// }
-
-t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list	*ret;
-	t_list	*ret_new;
-	t_list	*temp;
-	t_list	*lst_new;
+	t_list		*result;
+	t_list		*beg;
+	t_list		*temp;
 
-	if (lst == NULL || f == NULL)
+	if (!lst || !f)
 		return (NULL);
-	lst_new = lst;
-	temp = (*f)(lst_new);
-	if ((ret_new = ft_lstnew(temp->content, temp->content_size)) == NULL)
+	temp = f(lst);
+	if (!(result = ft_lstnew(temp->content, temp->content_size)))
 		return (NULL);
-	ret = ret_new;
-	lst_new = lst_new->next;
-	while (lst_new != NULL)
+	beg = result;
+	while (lst->next)
 	{
-		temp = (*f)(lst_new);
-		ret_new->next = ft_lstnew(temp->content, temp->content_size);
-		if (ret_new->next == NULL)
+		temp = f(lst->next);
+		if (!(result->next = ft_lstnew(temp->content, temp->content_size)))
+		{
+			ft_lstdel(&beg, &ft_bzero);
 			return (NULL);
-		ret_new = ret_new->next;
-		lst_new = lst_new->next;
+		}
+		lst = lst->next;
+		result = result->next;
 	}
-	return (ret);
+	return (beg);
 }
